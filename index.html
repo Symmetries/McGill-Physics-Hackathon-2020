@@ -2,23 +2,23 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Torus Electrodynamics</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Torus Electrodynamics</title>
 
-	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
 
-	<!-- KaTex -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
-	 crossorigin="anonymous">
-	<!-- The loading of KaTeX is deferred to speed up page rendering -->
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
-	 crossorigin="anonymous">
+  <!-- KaTex -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+    integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+    integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous">
 
-	</script>
-	<!-- To automatically render math in text elements, include the auto-render extension: -->
-	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
-	 crossorigin="anonymous" onload='renderMathInElement(document.body, options={
+    </script>
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+    integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload='renderMathInElement(document.body, options={
             delimeters: [
                 {left: "$$", right: "$$" , display: true}, 
                 {left: "$" , right: "$" , display: false}, 
@@ -27,102 +27,127 @@
             ]
         })'>
 
-	</script>
+        </script>
 
-	<!-- Markdown -->
-	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
+  <!-- Markdown -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
 
-	</script>
+  </script>
 
-	<!-- LaTex Font -->
-	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-	<!-- available fonts: 'Computer Modern Bright', 'Computer Modern Concrete', 'Computer Modern Sans', 
+  <!-- LaTex Font -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+  <!-- available fonts: 'Computer Modern Bright', 'Computer Modern Concrete', 'Computer Modern Sans', 
         'Computer Modern Serif', 'Computer Modern Typewriter' -->
 
-	<!-- font awesome icons -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js">
 
-	</script>
-	<script src="script.js">
+  </script>
+  <script src="script.js">
 
-	</script>
+  </script>
 
-	<h1 class='content'>Electrodynamics on a Flat Torus</h1>
-	<div id='wrapper'>
-		<div id='canvas'></div>
-	</div>
+  <h1 class='content'>Electrodynamics on a Flat Torus</h1>
+  <div id='wrapper'>
+    <div id='canvas'></div>
+  </div>
 
-	<div id='undercanvas' class='sized content'>
-		<!-- invisible entry to make things nice and balanced -->
-		<div id='radiodiv' class='radios'></div>
-		<div id='colorradiodiv' class='radios'></div>
-	</div>
+  <div id='undercanvas' class='sized content'>
+    <!-- invisible entry to make things nice and balanced -->
+    <div id='radiodiv' class='radios'></div>
+    <div id='colorradiodiv' class='radios'></div>
+  </div>
 
-	<div id='description' class='sized content'>
-		<p>
-			<span class='cool'>What is this?</span> A simulation of electrodynamic forces on the surface of a flat torus, where the user can view the surface in both intrinsic and extrinsic (embedded in 3D) views. The user can add positive and negative charges and visualize their movement and the resulting electric field on the torus.
-		</p>
+  <div id='description' class='sized content'>
+    <p>
+      <span class='cool'>What is this?</span> A simulation of electrodynamic forces on the surface of a flat torus,
+      where the user can view the surface in both intrinsic and extrinsic (embedded in 3D) views. The user can add
+      positive and negative charges and visualize their movement and the resulting electric field on the torus.
+    </p>
 
-		<p> <span class='cool'>How to use the simulation</span>
+    <p> <span class='cool'>How to use the simulation</span>
     <ul>
-      <li> In the intrinsic view, we look at the flat torus as a standalone surface, which can be viewed as a square with the pairs of top and bottom as well as left and right edges identified. In the extrinsic mode, we embed the torus in \(\mathbb{R}^3\) and project to our viewing plane: this gives us the usual donut picture of a torus. Click on the buttons at the bottom to switch between the two views.</li>
-      <li> In intrinsic mode, click on the screen to add charges. Use \(+\) or \(-\) to control whether the added particle is a proton (positive charge) or electron (negative charge). The arrows at each grid point represent the electric field at that point.</li>
+      <li> In the intrinsic view, we look at the flat torus as a standalone surface, which can be viewed as a square
+        with the pairs of top and bottom as well as left and right edges identified. In the extrinsic mode, we embed the
+        torus in \(\mathbb{R}^3\) and project to our viewing plane: this gives us the usual donut picture of a torus.
+        Click on the buttons at the bottom to switch between the two views.</li>
+      <li> In intrinsic mode, click on the screen to add charges. Use \(+\) or \(-\) to control whether the added
+        particle is a proton (positive charge) or electron (negative charge). The arrows at each grid point represent
+        the electric field at that point.</li>
       <li> In extrinsic mode, drag the screen to rotate the torus.</li>
     </ul>
-    </p> 
+    </p>
 
     <p>
-      <span class='cool'>Math and physics behind the project</span> 
-      The electrostatic force between two point charges \( q_1 \) and \( q_2\) has the following magnitude, given by Coulomb's law:  \[ || \vec{\mathbf{F}} ||= k\frac{q_1q_2}{r^2}\] where \( k \) is Coulomb's constant (in \( N \cdotp m^2 \cdotp C^{-2} \)) and \( r \) is the distance between the two charges (in \(m\)). The force is attractive if the charges have opposite signs, and repulsive otherwise.   
-      The electric field \( \mathbf{\vec{E}} \) produced by a charge at a point \(x \) is a vector field defined at each point (except at the point \(x\)) given by \[ \mathbf{\vec{E}}= \frac{\mathbf{\vec{F}}}{q} \] where \(\mathbf{\vec{F}}\) is the force between the charge at point \(x \) and the charge \(q\) at an arbitrary point of space.
+      <span class='cool'>Math and physics behind the project</span>
+      The electrostatic force between two point charges \( q_1 \) and \( q_2\) has the following magnitude, given by
+      Coulomb's law: \[ || \vec{\mathbf{F}} ||= k\frac{q_1q_2}{r^2}\] where \( k \) is Coulomb's constant (in \( N
+      \cdotp m^2 \cdotp C^{-2} \)) and \( r \) is the distance between the two charges (in \(m\)). The force is
+      attractive if the charges have opposite signs, and repulsive otherwise.
+      The electric field \( \mathbf{\vec{E}} \) produced by a charge at a point \(x \) is a vector field defined at each
+      point (except at the point \(x\)) given by \[ \mathbf{\vec{E}}= \frac{\mathbf{\vec{F}}}{q} \] where
+      \(\mathbf{\vec{F}}\) is the force between the charge at point \(x \) and the charge \(q\) at an arbitrary point of
+      space.
       <br>
       <br>
-      Given \( N \) point charges denoted by \( q_i \) where \( i = 1, ..., N \), we seek to study the electric field they generate. We define the potential function \( V_p: \mathbb{R}^3 \rightarrow \mathbb{R} \) as the fundamental solution to Poisson's Equation: 
+      Given \( N \) point charges denoted by \( q_i \) where \( i = 1, ..., N \), we seek to study the electric field
+      they generate. We define the potential function \( V_p: \mathbb{R}^3 \rightarrow \mathbb{R} \) as the fundamental
+      solution to Poisson's Equation:
       \[
-      - \Delta V_p = \delta_p. \]Here, the dirac delta \( \delta_p \) is the distribution (a generalized function) which concentrates all the mass at one point, \( x = p \) (intuitively, it can be thought of as the \( \text{``derivative''} \) as the Heavyside function where the jump from \( 0 \) to \( 1 \) occurs at \( x = p \)):
-      \[ 
-        H(x) := \begin{cases} 
-      0 & \text{ if } x < p, \\
-      1 & \text{ if } x \geq p.
-        \end{cases}
-      \]
-       This simulation seeks to study a generalization of this problem, where instead we study electric fields on general Riemannian spaces rather than just flat space \( \mathbb{R}^3 \).
-      <br> 
-      <br> 
-      The mathematical justification for our project comes from the following example in the paper, <i>Geometrical and topological aspects of electrostatics on Riemannian manifolds</i>:
-      <br>
-      <br> 
-      <b>Example.</b> Let us consider the Euclidean plane, with coordinates \( x \), and the additive action of \( \mathbb{Z}^2 \) on \( \mathbb{R}^2 \). Define the following sum over the lattice \( \mathbb{Z}^2 \):
-      \[ 
+      - \Delta V_p = \delta_p. \]Here, the dirac delta \( \delta_p \) is the distribution (a generalized function) which
+      concentrates all the mass at one point, \( x = p \) (intuitively, it can be thought of as the \(
+      \text{``derivative''} \) as the Heavyside function where the jump from \( 0 \) to \( 1 \) occurs at \( x = p \)):
+      \[
+      H(x) := \begin{cases}
+      0 & \text{ if } x < p, \\ 1 & \text{ if } x \geq p. \end{cases} \] This simulation seeks to study a generalization
+        of this problem, where instead we study electric fields on general Riemannian spaces rather than just flat space
+        \( \mathbb{R}^3 \). <br>
+        <br>
+        The mathematical justification for our project comes from the following example in the paper, <i>Geometrical and
+          topological aspects of electrostatics on Riemannian manifolds</i>:
+        <br>
+        <br>
+        <b>Example.</b> Let us consider the Euclidean plane, with coordinates \( x \), and the additive action of \(
+        \mathbb{Z}^2 \) on \( \mathbb{R}^2 \). Define the following sum over the lattice \( \mathbb{Z}^2 \):
+        \[
         \sum_{n \in \mathbb{Z}^2} := \lim_{k \rightarrow \infty} \sum_{n_1 = -k}^k \sum_{n = -k}^k.
-      \]
-      Given a configuration of point charges \( q_i \) and locations \( x_i \), denoted by \( \mathcal{C} :=  \{ (q_i, x_i)_{i \in I} \} \). This configuration induces a potential of the form: 
-      \[ 
-      V = - \frac{1}{2\pi} \sum_{n \in \mathbb{Z}^2} \sum_{i=1}^N q_i \log | x- x_i + n | - c_n. 
-       \]
-    In our model one can add any number of positive and negative charges. When the positive and negative charges are equal, then we in the case of <i>conservative charges</i>. Here, the charges sum to zero. This is justified by the following proposition: 
-    <br>
-    <br>
-    <b>Proposition.</b><i> The electric field generated by the charge configuration \( \mathcal{C} \) on a closed \(2\)-manifold (a \( 2 \)-manifold is a two-dimensional manifold. The most well-known one is the sphere; the donut is the example that we focus on) exists if and only if \( \sum_{i \in I} q_i = 0 \) where \( I \) is some index set.
-    </i>
-    <br> 
-    <br> 
-    Without loss of generality, the configuration \( \mathcal{C} \) studied can be reduced to \( \mathcal{C} := \{\ ]-1, 0\ [\ , ]\ 1, x_0[\ \} \). We want the above sum for \( V \) to be uniformly convergent on compact sets which do not contain point charges. Under such restrictions, we obtain the following choice for \( c_n \):
-    \[ 
-    c_n = \frac{|x_0 \cdot n|^2}{1+|n|^4} - \frac{|x_0|^2}{2+2|n|^2}.
-    \]
-    </p> 
+        \]
+        Given a configuration of point charges \( q_i \) and locations \( x_i \), denoted by \( \mathcal{C} := \{ (q_i,
+        x_i)_{i \in I} \} \). This configuration induces a potential of the form:
+        \[
+        V = - \frac{1}{2\pi} \sum_{n \in \mathbb{Z}^2} \sum_{i=1}^N q_i \log | x- x_i + n | - c_n.
+        \]
+        In our model one can add any number of positive and negative charges. When the positive and negative charges are
+        equal, then we in the case of <i>conservative charges</i>. Here, the charges sum to zero. This is justified by
+        the following proposition:
+        <br>
+        <br>
+        <b>Proposition.</b><i> The electric field generated by the charge configuration \( \mathcal{C} \) on a closed
+          \(2\)-manifold (a \( 2 \)-manifold is a two-dimensional manifold: the most well-known one is the sphere; the
+          donut is the example that we focus on) exists if and only if \( \sum_{i \in I} q_i = 0 \) where \( I \) is
+          some index set.
+        </i>
+        <br>
+        <br>
+        Without loss of generality, the configuration \( \mathcal{C} \) studied can be reduced to \( \mathcal{C} := \{\
+        ]-1, 0\ [\ , ]\ 1, x_0[\ \} \). We want the above sum for \( V \) to be uniformly convergent on compact sets
+        which do not contain point charges. Under such restrictions, we obtain the following choice for \( c_n \):
+        \[
+        c_n = \frac{|x_0 \cdot n|^2}{1+|n|^4} - \frac{|x_0|^2}{2+2|n|^2}.
+        \]
+    </p>
 
     <!-- <p>
       <span class='cool'>TODO CODING</span> 
@@ -136,14 +161,18 @@
       </ol>
     </p> -->
 
-    <h3><span class='cool'>References</span></h3> 
-    <p><u>Enciso, Alberto and Peralta-Salas, Daniel (2008).</u> <b>Geometrical and topological aspects of electrostatics on Riemannian manifolds</b>. <i>Journal of Geometry and Physics</i>, <b>58</b>(9): 1267-1269. 
- </p>
+    <h3><span class='cool'>References</span></h3>
+    <p><u>Enciso, Alberto and Peralta-Salas, Daniel (2008).</u> <b>Geometrical and topological aspects of electrostatics
+        on Riemannian manifolds</b>. <i>Journal of Geometry and Physics</i>, <b>58</b>(9): 1267-1269.
+    </p>
   </div>
 
   <div id='footer' class='sized content'>
     <p>&copy; November 2020 </p>
-    <p style='margin-top: 0'> Made by <a href=https://abrandenberger.github.io/''>Anna Brandenberger</a>, <a href='https://maiadd.github.io/'>Maia Darmon</a>, <a href='https://shereenelaidi.github.io/'>Shereen Elaidi</a>, <a href='https://diegolopez.me/'>Diego Lopez</a> and <a href='https://gabrielamp.github.io/'>Gabriela Moisescu-Pareja</a> for the 2020 McGill Physics Hackathon </p>
+    <p style='margin-top: 0'> Made by <a href=https://abrandenberger.github.io/''>Anna Brandenberger</a>, <a
+        href='https://maiadd.github.io/'>Maia Darmon</a>, <a href='https://shereenelaidi.github.io/'>Shereen Elaidi</a>,
+      <a href='https://diegolopez.me/'>Diego Lopez</a> and <a href='https://gabrielamp.github.io/'>Gabriela
+        Moisescu-Pareja</a> for the 2020 McGill Physics Hackathon </p>
   </div>
 
 </body>
